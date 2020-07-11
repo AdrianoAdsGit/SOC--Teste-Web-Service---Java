@@ -1,0 +1,393 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://soctest.com.br"
+	xmlns:tns="http://soctest.com.br" elementFormDefault="qualified">
+
+	<xs:element name="InsertPacienteRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PacienteDetail"
+					type="tns:PacienteDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="InsertPacienteResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdatePacienteRequest" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PacienteDetail"
+					type="tns:PacienteDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdatePacienteResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="GetPacienteByIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetPacienteByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PacienteDetail"
+					type="tns:PacienteDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetAllPacienteRequest">
+		<xs:complexType>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetAllPacienteResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PacienteDetail"
+					type="tns:PacienteDetail" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="DeletePacienteRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeletePacienteResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="InsertExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ExameDetail" type="tns:ExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="InsertExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ExameDetail" type="tns:ExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="GetExameByIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetExameByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ExameDetail" type="tns:ExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetAllExameRequest">
+		<xs:complexType>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetAllExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ExameDetail" type="tns:ExameDetail"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="InsertTipoExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TipoExameDetail"
+					type="tns:TipoExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="InsertTipoExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateTipoExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TipoExameDetail"
+					type="tns:TipoExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateTipoExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="GetTipoExameByIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetTipoExameByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TipoExameDetail"
+					type="tns:TipoExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetAllTipoExameRequest">
+		<xs:complexType>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetAllTipoExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TipoExameDetail"
+					type="tns:TipoExameDetail" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteTipoExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteTipoExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="InsertPacienteExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="InsertPacienteExameDetail" type="tns:InsertPacienteExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="InsertPacienteExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdatePacienteExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PacienteExameDetail" type="tns:PacienteExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdatePacienteExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="GetPacienteExameByIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetPacienteExameByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PacienteExameDetail" type="tns:PacienteExameDetail" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetAllPacienteExameRequest">
+		<xs:complexType>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetAllPacienteExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PacienteExameDetail" type="tns:PacienteExameDetail"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeletePacienteExameRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeletePacienteExameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="tns:Status" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:simpleType name="Status">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SUCESSO"></xs:enumeration>
+			<xs:enumeration value="FALHA"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="PacienteDetail">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+			<xs:element name="nome" type="xs:string" />
+			<xs:element name="dataNascimento" type="xs:date" />
+			<xs:element name="cpf" type="xs:string" />
+			<xs:element name="endereco" type="xs:string" />
+			<xs:element name="dataCadastro" type="xs:date" />
+			<xs:element name="dataAlteracao" type="xs:date" />
+			<xs:element name="email" type="xs:string" />
+			<xs:element name="convenio" type="xs:string" />
+			<xs:element name="tipoExame" type="xs:string" />
+			<xs:element name="anexoPedido" type="xs:string" />
+			<xs:element name="comentarios" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ExameDetail">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+			<xs:element name="protocolo" type="xs:string" />
+			<xs:element name="nome_medico" type="xs:string" />
+			<xs:element name="data_exame" type="xs:date" />
+			<xs:element name="tipo_exame" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="TipoExameDetail">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+			<xs:element name="tipoExame" type="xs:string" />
+			<xs:element name="descricaoExame" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="InsertPacienteExameDetail">
+		<xs:sequence>
+		    <xs:element name="id" type="xs:int" />
+			<xs:element name="id_paciente" type="xs:int" />
+			<xs:element name="id_exame" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PacienteExameDetail">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+			<xs:element name="id_exame" type="xs:int" />
+			<xs:element name="desc_exame" type="xs:string" />
+			<xs:element name="id_paciente" type="xs:int" />
+			<xs:element name="nome_paciente" type="xs:string" />
+			
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>
